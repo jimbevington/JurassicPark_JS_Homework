@@ -5,20 +5,21 @@ var Enclosure = require('../Enclosure.js');
 describe('Jurassic Park', function(){
 
   beforeEach(function(){
-    brachio = new Dinosaur("Brachiosaurus", 2);
+    brachio1 = new Dinosaur("Brachiosaurus", 2);
+    brachio2 = new Dinosaur("Brachiosaurus", 3);
     steg = new Dinosaur("Stegosaurus", 4);
     compy = new Dinosaur("Compsognathus", 10);
     enclosure1 = new Enclosure();
   })
 
   it('dino has type', function(){
-    assert.strictEqual(brachio.type, "Brachiosaurus");
+    assert.strictEqual(brachio1.type, "Brachiosaurus");
     assert.strictEqual(steg.type, "Stegosaurus");
   });
 
   it('dino has offspring per year', function(){
     assert.strictEqual(compy.offspringPerYear, 10);
-    assert.strictEqual(brachio.offspringPerYear, 2);
+    assert.strictEqual(brachio1.offspringPerYear, 2);
   });
 
   it('enclosure starts empty', function(){
@@ -26,12 +27,19 @@ describe('Jurassic Park', function(){
   });
 
   it('can add dinosaur', function(){
-    enclosure1.add(brachio);
+    enclosure1.add(brachio1);
     assert.strictEqual(enclosure1.dinosaurs.length, 1);
-    assert.strictEqual(enclosure1.dinosaurs[0], brachio);
+    assert.strictEqual(enclosure1.dinosaurs[0], brachio1);
   });
 
-  it('can remove all dinosaurs of type');
+  it('can remove all dinosaurs of type', function(){
+    enclosure1.add(brachio1);
+    enclosure1.add(brachio2);
+    enclosure1.add(compy);
+    enclosure1.removeByType("Brachiosaurus");
+    assert.strictEqual(enclosure1.dinosaurs.length, 1);
+  });
+
 
   it('all dinosaurs with minimum offspring count');
 
