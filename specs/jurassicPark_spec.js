@@ -52,8 +52,20 @@ describe('Jurassic Park', function(){
   });
 
   // extensions
-  it('dino count after 1 year with 1 dino');
-  it('dino count after 2 years with 1 dino');
-  it('dino count after 2 years with 2 dinos');
+  it('dino count after 1 year with 1 dino', function(){
+    park.add(compy);
+    assert.strictEqual(park.modelDinoPopulation(1), 11);
+  });
+
+  it('dino count after 2 years with 1 dino', function(){
+    park.add(compy);
+    assert.strictEqual(park.modelDinoPopulation(2), 121);
+  });
+
+  it('dino count after 2 years with 2 dinos', function(){
+    park.add(compy);
+    park.add(steg);
+    assert.strictEqual(park.modelDinoPopulation(2), 146)
+  });
 
 })
