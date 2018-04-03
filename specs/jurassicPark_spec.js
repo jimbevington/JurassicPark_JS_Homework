@@ -5,13 +5,16 @@ var Enclosure = require('../Enclosure.js');
 describe('Jurassic Park', function(){
 
   beforeEach(function(){
-    brachio = new Dinosaur('Brachiosaurus', 2);
-    steg = new Dinosaur('Stegosaurus', 4);
-    compy = new Dinosaur('Compsognathus', 10);
+    brachio = new Dinosaur("Brachiosaurus", 2);
+    steg = new Dinosaur("Stegosaurus", 4);
+    compy = new Dinosaur("Compsognathus", 10);
     enclosure1 = new Enclosure();
   })
 
-  it('dino has type');
+  it('dino has type', function(){
+    assert.strictEqual(brachio.type, "Brachiosaurus");
+    assert.strictEqual(steg.type, "Stegosaurus");
+  });
 
   it('dino has offspring per year');
 
