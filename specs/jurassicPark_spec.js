@@ -11,6 +11,18 @@ describe('Jurassic Park', function(){
     enclosure1 = new Enclosure();
   })
 
+  it('dino has type');
 
+  it('dino has offspring per year');
+
+  it('enclosure starts empty');
+  it('can add dinosaur');
+  it('can remove all dinosaurs of type');
+  it('all dinosaurs with minimum offspring count');
+
+  // extensions
+  it('dino count after 1 year with 1 dino');
+  it('dino count after 2 years with 1 dino');
+  it('dino count after 2 years with 2 dinos');
 
 })
