@@ -25,7 +25,11 @@ describe('Jurassic Park', function(){
     assert.strictEqual(enclosure1.dinosaurs.length, 0);
   });
 
-  it('can add dinosaur');
+  it('can add dinosaur', function(){
+    enclosure1.add(brachio);
+    assert.strictEqual(enclosure1.dinosaurs.length, 1);
+    assert.strictEqual(enclosure1.dinosaurs[0], brachio);
+  });
 
   it('can remove all dinosaurs of type');
 
