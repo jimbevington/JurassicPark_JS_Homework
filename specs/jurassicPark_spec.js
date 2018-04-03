@@ -8,6 +8,7 @@ describe('Jurassic Park', function(){
     brachio = new Dinosaur('Brachiosaurus', 2);
     steg = new Dinosaur('Stegosaurus', 4);
     compy = new Dinosaur('Compsognathus', 10);
+    enclosure1 = new Enclosure();
   })
 
 
