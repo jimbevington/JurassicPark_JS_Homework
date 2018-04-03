@@ -41,7 +41,15 @@ describe('Jurassic Park', function(){
   });
 
 
-  it('all dinosaurs with minimum offspring count');
+  it('all dinosaurs with minimum offspring count', function(){
+    enclosure1.add(brachio1);
+    enclosure1.add(brachio2);
+    enclosure1.add(steg);
+    enclosure1.add(compy);
+    let promiscuousDinos = enclosure1.getDinosWithMinimumOffspring(4);
+    assert.strictEqual(promiscuousDinos.length, 2);
+    assert.deepStrictEqual(promiscuousDinos, [steg, compy]);
+  });
 
   // extensions
   it('dino count after 1 year with 1 dino');
