@@ -21,9 +21,14 @@ describe('Jurassic Park', function(){
     assert.strictEqual(brachio.offspringPerYear, 2);
   });
 
-  it('enclosure starts empty');
+  it('enclosure starts empty', function(){
+    assert.strictEqual(enclosure1.dinosaurs.length, 0);
+  });
+
   it('can add dinosaur');
+
   it('can remove all dinosaurs of type');
+
   it('all dinosaurs with minimum offspring count');
 
   // extensions
