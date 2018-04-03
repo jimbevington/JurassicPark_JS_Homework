@@ -16,7 +16,10 @@ describe('Jurassic Park', function(){
     assert.strictEqual(steg.type, "Stegosaurus");
   });
 
-  it('dino has offspring per year');
+  it('dino has offspring per year', function(){
+    assert.strictEqual(compy.offspringPerYear, 10);
+    assert.strictEqual(brachio.offspringPerYear, 2);
+  });
 
   it('enclosure starts empty');
   it('can add dinosaur');
